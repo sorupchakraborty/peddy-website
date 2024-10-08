@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Website</title>
+
+
+
+    <!-- google font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- daisyui and tailwindcss cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css  -->
+    <style>
+        .font-lato {
+            font-family: "Lato", sans-serif;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- tailwind script  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class=" font-lato ">
+    <!-- header section start  -->
+    <header class="md:container md:mx-auto">
+        <!-- navbar section  -->
+        <nav class="my-8">
+            <section class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <img src="./images/logo.webp" alt="">
+                    <h3 class="hidden md:flex md:text-2xl font-bold">Peddy</h3>
+                </div>
+                <div class="text-center">
+                    <ul class="flex justify-center items-center gap-4">
+                        <li class="font-bold">Home</li>
+                        <li class="font-bold">Shop</li>
+                        <li class="font-bold">Contact</li>
+                    </ul>
+                </div>
+                <img src="./images/Frame 4.png" alt="">
+
+            </section>
+        </nav>
+
+        <!-- banner section  -->
+
+        <section>
+
+            <div class="text-center">
+                <h5 class="text-xl md:text-2xl text-gray-600 mb-4 py-2">Bringing Families Together ❤️‍🔥</h5>
+                <h1 class=" text-3xl md:text-5xl font-bold mb-4 md:max-w-[60%] xl:max-w-[40%] mx-auto py-2">Your Path to
+                    Adoption Starts Here</h1>
+                <p class="mb-4 xl:max-w-[60%] mx-auto py-2">Discover the joy of bringing a new furry friend into your
+                    home. Our adoption process is simple and transparent, ensuring that you find the perfect companion
+                    to join your family. Start your journey with us today and make a difference in the life of a pet in
+                    need.</p>
+                <a href="#main"><button id=""
+                        class="btn bg-[#0E7A81] text-white md:px-8 md:py-4 font-bold py-2 hover:bg-[#4d3fe2]">View
+                        more</button></a>
+            </div>
+            <div class="flex justify-center">
+                <img class="" src="./images/pet.webp" alt="">
+            </div>
+
+        </section>
+
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start  -->
+    <main class="md:container md:mx-auto">
+        <!-- Adopt your best friend section  -->
+        <section id="main" class="text-center">
+            <h3 class="text-xl md:text-2xl text-gray-600 mb-4 font-bold">Adopt Your Best Friend</h3>
+            <p class="mb-4 xl:max-w-[60%] mx-auto py-2">Adopting a pet is a rewarding experience that brings joy and companionship into your life. By choosing to adopt, you are giving a loving home to an animal in need and making a positive impact on their life. Our adoption process is designed to match you with the perfect pet that fits your lifestyle and preferences. Join us in making a difference, one adoption at a time.</p>
+        </section>
+        </section>
+
+        <!-- Logo Card Section -->
+        <section id="logo-card-id" class="flex justify-center items-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 mb-8">
+                <!-- Dogs Category -->
+                <button id="dog-category"
+                    class="category-card category-btn flex flex-col md:flex-row items-center px-4 md:px-12 py-2 border rounded-2xl mx-4 cursor-pointer hover:bg-green-400">
+                    <img src="./images/dog.png" alt="Dogs">
+                    <h3 class="items-center text-gray-600 px-2 font-bold">Dogs</h3>
+                </button>
+                <!-- Cats Category -->
+                <button id="cat-category"
+                    class="category-card category-btn flex flex-col md:flex-row items-center px-4 md:px-12 py-2 border rounded-2xl mx-4 cursor-pointer hover:bg-green-400">
+                    <img src="./images/cat.png" alt="Cats">
+                    <h3 class="items-center text-gray-600 px-2 font-bold">Cats</h3>
+                </button>
+                <!-- Rabbits Category -->
+                <button id="rabbit-category"
+                    class="category-card category-btn flex flex-col md:flex-row items-center px-4 md:px-12 py-2 border rounded-2xl mx-4 cursor-pointer hover:bg-green-400">
+                    <img src="./images/bunny.png" alt="Rabbits">
+                    <h3 class="items-center text-gray-600 px-2 font-bold">Rabbits</h3>
+                </button>
+                <!-- Birds Category -->
+                <button id="bird-category"
+                    class="category-card category-btn flex flex-col md:flex-row items-center px-4 md:px-12 py-2 border rounded-2xl mx-4 cursor-pointer hover:bg-green-400">
+                    <img src="./images/bird.png" alt="Birds">
+                    <h3 class="items-center text-gray-600 px-2 font-bold">Birds</h3>
+                </button>
+            </div>
+        </section>
+
+        <!-- Sort Section -->
+        <section class="flex flex-col md:flex-row justify-between items-center mb-4">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-xl md:text-2xl text-gray-600 font-bold">Best Deal For you</h2>
+            </div>
+            <div>
+                <button id="sort-price-btn"
+                    class="btn bg-[#0E7A81] text-white md:px-8 md:py-4 font-bold py-2 hover:bg-[#4d3fe2]">Sort by
+                    Price</button>
+            </div>
+        </section>
+
+        <!-- Pet Card Section -->
+        <section class="mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <!-- Left Section with Cards -->
+                <div class="col-span-1 md:col-span-2 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6"
+                    id="pet-cards">
+
+                </div>
+
+                <!-- Right Section (Empty Placeholder) -->
+                <div id="right-section" class="border rounded-lg p-4">
+
+                </div>
+            </div>
+        </section>
+
+        <div id="adoption-modal" class=" hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+            <div class="text-white text-4xl font-bold" id="adoption-countdown">3</div>
+        </div>
+
+
+
+
+    </main>
+    <!-- main section end -->
+
+    <!-- footer section start  -->
+    <footer class="bg-[#131313]">
+
+        <section class="p-4 flex flex-col md:flex-row md:justify-between md:items-center">
+            <section class="mb-2">
+                <div class="flex items-center gap-2">
+                    <img src="./images/logo.webp" alt="">
+                    <h3 class=" md:text-2xl font-bold text-white">Peddy</h3>
+                </div>
+                <p class="text-white ">Location: av. Washington 165, NY CA </p>
+                <p class="text-white ">54003</p>
+                <p class="text-white ">Phone: +31 85 964 47 25</p>
+                <p class="text-white ">Email: info@yourdomain.com</p>
+                <p class="text-white py-2">Openings hours: 9.00 AM - 5.00 PM</p>
+
+                <div class="flex gap-4">
+                    <img src="./images/fb.png" alt="">
+                    <img src="./images/insta.png" alt="">
+                    <img src="./images/x.png" alt="">
+                    <img src="./images/youtube.png" alt="">
+
+                </div>
+            </section>
+            <section class="mb-4">
+                <h5 class="md:text-2xl font-bold text-white">Useful Links</h5>
+                <p class="text-white ">Home</p>
+                <p class="text-white ">About Us</p>
+                <p class="text-white ">Animals</p>
+                <p class="text-white ">Foundation</p>
+                <p class="text-white ">Contact</p>
+            </section>
+            <section class="flex flex-col">
+                <h5 class="md:text-2xl font-bold text-white py-4">Drop a Message</h5>
+                <input type="text" id="" class="bg-[#FFFFFF0D] text-white text-sm rounded-xl p-2.5 "
+                    placeholder="Enter your email">
+                <button
+                    class="btn rounded-xl bg-[#0E7A81] text-white py-2 md:px-8 md:py-4 font-bold  hover:bg-[#4d3fe2]">Subscribe</button>
+            </section>
+        </section>
+
+
+    </footer>
+    <!-- footer section end -->
+
+    <!-- Details Modal -->
+    <div id="details-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-lg shadow-md  w-[22rem] md:w-[36rem] p-5 relative">
+            <div id="modal-content">
+                <!-- Modal content will be populated here -->
+            </div>
+            <button id="close-modal"
+                class=" text-cyan-600 hover:text-cyan-700 text-xl font-semibold w-full h-10 bg-cyan-100 hover:bg-cyan-200 rounded-lg mt-4 border-2 border-cyan-200">
+                Cancel
+            </button>
+        </div>
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+    <script>
+
+        async function loadDetails(id) {
+
+            async function fetchDetails(id) {
+                const response = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${id}`);
+                const pet = await response.json();
+                if (!pet) return;
+                return pet;
+            }
+            const pet = await fetchDetails(id);
+
+
+            const modalContent = document.querySelector("#modal-content");
+            modalContent.innerHTML = `
+              <div class="bg-white rounded-lg shadow-md h-[40rem] w-[20rem] md:w-[34rem] border-2 border-gray-200">
+                <div>
+                  <img src="${pet.petData.image}" alt="${pet.petData.pet_name}" class="w-full h-[20rem] object-cover p-2 rounded-lg">
+                </div>
+                <div class="md:border-b-2 border-gray-200 md:pb-1 mx-2">
+                  <h1 class="text-2xl font-bold text-gray-800">
+                  ${pet.petData.pet_name !== undefined && pet.petData.pet_name !== null
+                    ? pet.petData.pet_name
+                    : "unavailable"
+                }</h1>
+                  <div class="grid grid-cols-2 grid-rows-4 gap-x-2">
+                  <div class="flex items-center gap-x-2">
+                  <img src="./images/Frame.png" alt="">
+                  <p class="text-gray-600">Breed: ${pet.petData.breed !== undefined && pet.petData.breed !== null
+                    ? pet.petData.breed
+                    : "unavailable"
+                }</p>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                    <img src="./images/Frame (1).png" alt="">
+                    <p class="text-gray-600">Birth:
+                    ${pet.petData.date_of_birth !== undefined &&
+                    pet.petData.date_of_birth !== null
+                    ? pet.petData.date_of_birth
+                    : "unavailable"
+                }</p>
+                  </div>
+                  <div class="flex items-center gap-x-2">
+                  <img src="./images/Frame (2).png" alt="">
+                  <p class="text-gray-600">Gender:
+                  ${pet.petData.gender !== undefined && pet.petData.gender !== null
+                    ? pet.petData.gender
+                    : "unavailable"
+                }</p>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                    <img src="./images/Frame (3).png" alt="">
+                    <p class="text-gray-600">Price: $
+                    ${pet.petData.price !== undefined && pet.petData.price !== null
+                    ? pet.petData.price
+                    : "unavailable"
+                }</p>
+                    </div>
+                     <div class="flex items-center gap-x-2">
+                    <img src="./images/Frame (3).png" alt="">
+                    <p class="text-gray-600">Vaccinated status:
+                    ${pet.petData.vaccinated_status !== undefined &&
+                    pet.petData.vaccinated_status !== null
+                    ? pet.petData.vaccinated_status
+                    : "unavailable"
+                }</p>
+                    </div>
+                    </div>
+                        
+                    </div>
+                        <div class="mt-[-3rem] md:mt-0 p-2">
+                            <h1 class="text-md text-gray-700 font-semibold">Detailed Information</h1 >
+                            <p class="text-md text-gray-600 line-clamp-4 md:line-clamp-6">${pet.petData.pet_details !== undefined &&
+                    pet.petData.pet_details !== null
+                    ? pet.petData.pet_details
+                    : "unavailable"
+                }</p>
+                        </div>
+                    </div>
+                    `;
+
+
+            const modal = document.querySelector("#details-modal");
+            modal.classList.remove("hidden");
+        }
+
+
+        document.querySelector("#close-modal").addEventListener("click", () => {
+            const modal = document.querySelector("#details-modal");
+            modal.classList.add("hidden");
+        });
+
+
+        document.querySelectorAll(".category-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const id = button.id.split("-")[0];
+                loadDetails(id);
+            });
+        });
+    </script>
+</body>
+
+</html>
