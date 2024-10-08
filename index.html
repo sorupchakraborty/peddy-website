@@ -20,6 +20,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/735442037c.js" crossorigin="anonymous"></script>
+
     <!-- css  -->
     <style>
         .font-lato {
@@ -67,19 +70,39 @@
         <nav class="my-8">
             <section class="flex justify-between items-center">
                 <div class="flex items-center gap-2">
-                    <img src="./images/logo.webp" alt="">
+                    <img class="pl-4" src="./images/logo.webp" alt="">
                     <h3 class="hidden md:flex md:text-2xl font-bold">Peddy</h3>
                 </div>
-                <div class="text-center">
+
+                <!-- Hamburger icon for mobile view -->
+                <div class="block md:hidden px-4">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation menu -->
+                <div class="hidden md:block">
                     <ul class="flex justify-center items-center gap-4">
                         <li class="font-bold">Home</li>
                         <li class="font-bold">Shop</li>
                         <li class="font-bold">Contact</li>
                     </ul>
                 </div>
-                <img src="./images/Frame 4.png" alt="">
+
+                <!-- Shopping cart icon -->
+                <img class="hidden md:flex" src="./images/Frame 4.png" alt="">
 
             </section>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <ul class="flex flex-col items-center gap-4 mt-4">
+                    <li class="font-bold">Home</li>
+                    <li class="font-bold">Shop</li>
+                    <li class="font-bold">Contact</li>
+                </ul>
+            </div>
         </nav>
 
         <!-- banner section  -->
@@ -112,7 +135,11 @@
         <!-- Adopt your best friend section  -->
         <section id="main" class="text-center">
             <h3 class="text-xl md:text-2xl text-gray-600 mb-4 font-bold">Adopt Your Best Friend</h3>
-            <p class="mb-4 xl:max-w-[60%] mx-auto py-2">Adopting a pet is a rewarding experience that brings joy and companionship into your life. By choosing to adopt, you are giving a loving home to an animal in need and making a positive impact on their life. Our adoption process is designed to match you with the perfect pet that fits your lifestyle and preferences. Join us in making a difference, one adoption at a time.</p>
+            <p class="mb-4 xl:max-w-[60%] mx-auto py-2">Adopting a pet is a rewarding experience that brings joy and
+                companionship into your life. By choosing to adopt, you are giving a loving home to an animal in need
+                and making a positive impact on their life. Our adoption process is designed to match you with the
+                perfect pet that fits your lifestyle and preferences. Join us in making a difference, one adoption at a
+                time.</p>
         </section>
         </section>
 
@@ -342,6 +369,13 @@
                 const id = button.id.split("-")[0];
                 loadDetails(id);
             });
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
